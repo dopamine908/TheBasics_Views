@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 /*
 |--------------------------------------------------------------------------
 | 從controller到view的基本用法
@@ -33,3 +37,4 @@ Route::get('如果view在某個資料夾裡', 'ViewDemoController@bringVarToAdmi
 Route::get('檢查看看view有沒有存在', 'ViewDemoController@checkViewExists');
 
 Route::get('如果第一個view不存在則前往第二個', 'ViewDemoController@ifNoOneThenGoTwoView');
+
