@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*
+|--------------------------------------------------------------------------
+| 從controller到view的基本用法
+|--------------------------------------------------------------------------
+*/
+
+Route::get('controller傳遞參數到view', 'ViewDemoController@bringVarToView');
+
+Route::get('如果view在某個資料夾裡', 'ViewDemoController@bringVarToAdminIndex');
