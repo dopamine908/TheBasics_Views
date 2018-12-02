@@ -38,3 +38,14 @@ Route::get('檢查看看view有沒有存在', 'ViewDemoController@checkViewExist
 
 Route::get('如果第一個view不存在則前往第二個', 'ViewDemoController@ifNoOneThenGoTwoView');
 
+
+/*
+|--------------------------------------------------------------------------
+| 用View::composer 讓進入view的時候自動帶入一些我可能需要的共用變數
+|--------------------------------------------------------------------------
+我在底下兩個route寫了登入之後進去就可以看到自己的use id
+經由View::composer帶入值
+*/
+Route::view('ViewComposerDemo', 'ViewComposerDemoIndex');
+Route::view('ViewComposerDemo_other', 'ViewComposerDemoIndex_other');
+

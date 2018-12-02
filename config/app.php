@@ -175,6 +175,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //ComposerServiceProvider創建完之後要註冊才可以使用
+        App\Providers\ComposerServiceProvider::class,
+
     ],
 
     /*
